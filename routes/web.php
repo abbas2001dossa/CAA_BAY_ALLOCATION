@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlightsController;
+use App\Http\Controllers\DateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,5 +23,10 @@ Route::get('/', function () {
 // });
 
 Route::get('home', [FlightsController::class , 'show']);
+
+
+
+Route::get('/your-endpoint/{variable1}', [DateController::class, 'yourMethod']);
+
 
 
